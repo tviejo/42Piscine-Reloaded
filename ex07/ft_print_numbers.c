@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tviejo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 14:44:56 by tviejo            #+#    #+#             */
-/*   Updated: 2024/05/13 17:21:11 by tviejo           ###   ########.fr       */
+/*   Updated: 2024/05/13 17:09:26 by tviejo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,17 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_print_alphabet(void)
+void	ft_print_numbers(void)
 {
 	int	i;
 
-	i = 96;
-	while (i++ < 122)
+	i = 47;
+	while (i++ < 57)
 		ft_putchar(i);
 }
 /*
 int	main(void)
 {
-	ft_print_alphabet();
+	ft_print_numbers();
 }
 */
