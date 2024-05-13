@@ -6,23 +6,11 @@
 /*   By: tviejo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 18:00:37 by tviejo            #+#    #+#             */
-/*   Updated: 2024/05/13 18:01:03 by tviejo           ###   ########.fr       */
+/*   Updated: 2024/05/13 22:29:42 by tviejo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_sort_params.c                                   :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: tviejo <marvin@42.fr>                      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 11:10:05 by tviejo            #+#    #+#             */
-/*   Updated: 2024/02/19 23:06:17 by tviejo           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include <unistd.h>
+void	ft_putchar(char c);
 
 int	ft_strcmp(char *s1, char *s2)
 {
@@ -71,29 +59,22 @@ void	ft_sort_int_tab(char **tab, int size)
 	}
 }
 
-void	ft_putstr(char *str)
-{
-	int	cpt;
-
-	cpt = 0;
-	while (str[cpt] != '\0')
-	{
-		write(1, &str[cpt], 1);
-		cpt ++;
-	}
-}
-/*
 int	main(int argc, char *argv[])
 {
 	int	i;
+	int	cpt;
 
 	i = 1;
 	ft_sort_int_tab(argv, argc);
 	while (i < argc)
 	{
-		ft_putstr(argv[i]);
-		write(1, "\n", 1);
+		cpt = 0;
+		while (str[cpt] != '\0')
+		{
+			ft_putchar(str[cpt]);
+			cpt ++;
+		}
+		ft_putchar('\n');
 		i++;
 	}
 }
-*/

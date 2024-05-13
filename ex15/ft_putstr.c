@@ -6,17 +6,20 @@
 /*   By: tviejo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 17:46:19 by tviejo            #+#    #+#             */
-/*   Updated: 2024/05/13 17:46:31 by tviejo           ###   ########.fr       */
+/*   Updated: 2024/05/13 22:24:20 by tviejo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char c);
 
 void	ft_putstr(char *str)
 {
-	while (*str != '\0')
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
 	{
-		write(1, str, 1);
-		str ++;
+		ft_putchar(str[i]);
+		i++;
 	}
 }

@@ -6,11 +6,11 @@
 /*   By: tviejo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 18:15:07 by tviejo            #+#    #+#             */
-/*   Updated: 2024/05/13 18:19:23 by tviejo           ###   ########.fr       */
+/*   Updated: 2024/05/13 22:32:16 by tviejo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_count_if(char **tab, int (*f)(char*))
+int	ft_count_if(char **tab, int (*f)(char*))
 {
 	int	i;
 	int	cpt;
