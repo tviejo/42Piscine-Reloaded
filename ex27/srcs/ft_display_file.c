@@ -6,7 +6,7 @@
 /*   By: tviejo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 11:36:20 by tviejo            #+#    #+#             */
-/*   Updated: 2024/05/14 19:22:38 by tviejo           ###   ########.fr       */
+/*   Updated: 2024/05/14 19:38:51 by tviejo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,18 +37,18 @@ int	main(int argc, char **argv)
 	(void)argc;
 	if (argc < 2)
 	{
-		write(0, "File name missing.", 18);
+		write(2, "File name missing.\n", 19);
 		return (-1);
 	}
 	else if (argc > 2)
 	{
-		write(0, "Too many arguments.", 19);
+		write(2, "Too many arguments.\n", 20);
 		return (-2);
 	}
 	fd = open(argv[1], O_RDONLY);
 	if (fd < 0)
 	{
-		write(0, "Cannot read file.", 17);
+		write(2, "Cannot read file.\n", 18);
 		return (-3);
 	}
 	byte_read = read(fd, &buffer, 10000);
