@@ -6,7 +6,7 @@
 #    By: tviejo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/29 16:59:11 by tviejo            #+#    #+#              #
-#    Updated: 2024/05/14 18:10:39 by tviejo           ###   ########.fr        #
+#    Updated: 2024/05/15 10:21:03 by tviejo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,11 +35,11 @@ ${NAME}:		${OBJS}
 all:			${NAME}
 
 clean:
-				${RM} ${OBJS}
+			${RM} ${OBJS}
 
-fclean:			clean
-				${RM} ${NAME}
+fclean:			
+			${RM} ${OBJS} ${NAME}
 
-re:				fclean all
+re:			fclean all
 
 .PHONY:			all clean fclean re
