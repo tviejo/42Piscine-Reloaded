@@ -6,7 +6,7 @@
 /*   By: tviejo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 11:36:20 by tviejo            #+#    #+#             */
-/*   Updated: 2024/05/15 10:41:12 by tviejo           ###   ########.fr       */
+/*   Updated: 2024/05/15 14:56:25 by tviejo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,9 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_putstr(char *str)
-{
-	int	i;
-
-	i = -1;
-	while (str[++i] != '\0')
-		ft_putchar(str[i]);
-}
-
 int	ft_read(char *argv)
 {
-	char	buffer[1000 + 1];
+	char	buffer;
 	int		byte_read;
 	int		fd;
 
@@ -40,12 +31,16 @@ int	ft_read(char *argv)
 		write(2, "Cannot read file.\n", 18);
 		return (-3);
 	}
-	byte_read = 1;
+	byte_read = read(fd, &buffer, 1);
+	if (byte_read < 0)
+	{
+		write(2, "Cannot read file.\n", 18);
+		return (-3);
+	}
 	while (byte_read > 0)
 	{
-		byte_read = read(fd, &buffer, 1000);
-		buffer[byte_read] = '\0';
-		ft_putstr(buffer);
+		ft_putchar(buffer);
+		byte_read = read(fd, &buffer, 1);
 	}
 	close(fd);
 	return (0);
